@@ -1,0 +1,238 @@
+# =========================================================
+# .gitignore
+# Windows + GitHub web/Codespaces + Discord agent experiments
+# Python + Node/TypeScript
+# =========================================================
+
+# ------------------------------
+# OS / filesystem noise
+# ------------------------------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+*.lnk
+.DS_Store
+
+# ------------------------------
+# Editors / IDEs
+# Keep only shareable VS Code settings
+# ------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
+
+.idea/
+*.iml
+.vs/
+*.suo
+*.user
+*.userossc
+*.rsuser
+*.sln.docstates
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# ------------------------------
+# Secrets / local-only config
+# ------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+.envrc
+.direnv/
+
+.secrets/
+secrets/
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+credentials.local.json
+config.local.json
+settings.local.json
+
+# ------------------------------
+# Logs / temp / runtime files
+# ------------------------------
+*.log
+logs/
+log/
+tmp/
+temp/
+runtime/
+run/
+
+*.pid
+*.pid.lock
+*.seed
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------
+# Discord / agent local state
+# ------------------------------
+storage/
+data/
+memory/
+sessions/
+state/
+checkpoints/
+artifacts/
+
+# Local DBs
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-journal
+
+# ------------------------------
+# Vector stores / embeddings / local retrieval indexes
+# Explicitly ignored to prevent huge accidental commits
+# ------------------------------
+chroma/
+.chroma/
+chromadb/
+persist/
+vector_store/
+vectorstore/
+qdrant_storage/
+.qdrant/
+milvus_data/
+faiss_index/
+faiss/
+weaviate_data/
+
+# ------------------------------
+# Downloads / generated local assets
+# Keep these out unless you intentionally version them
+# ------------------------------
+downloads/
+uploads/
+recordings/
+transcripts/
+
+# ------------------------------
+# Node / JavaScript / TypeScript
+# ------------------------------
+node_modules/
+jspm_packages/
+web_modules/
+
+.npm/
+.pnpm-store/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn-integrity
+.pnp.*
+.bun/
+
+.eslintcache
+.stylelintcache
+.parcel-cache
+.turbo/
+.cache-loader/
+
+.next/
+.nuxt/
+.svelte-kit/
+.vite/
+dist/
+out/
+coverage/
+.nyc_output/
+
+*.tsbuildinfo
+.vscode-test/
+*.tgz
+
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Tool/test/type-check caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+.ipynb_checkpoints/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# Packaging / build artifacts
+build/
+site/
+.eggs/
+*.egg
+*.egg-info/
+.installed.cfg
+pip-wheel-metadata/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ------------------------------
+# Generic caches
+# ------------------------------
+.cache/
+
+# ------------------------------
+# Intentionally NOT ignored
+# These should usually stay versioned
+# ------------------------------
+# .dockerignore
+# .devcontainer/
+# package-lock.json
+# pnpm-lock.yaml
+# yarn.lock
+# poetry.lock
+# Pipfile.lock
+# uv.lock
+# .gitattributes
